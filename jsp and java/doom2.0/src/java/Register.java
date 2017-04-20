@@ -30,9 +30,20 @@ public class Register extends HttpServlet {
    protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-      
-          String email = request.getParameter("email");
-           String password = request.getParameter("Password");
+      String firstName = request.getParameter("firstName");
+      String middleName = request.getParameter("middleName");
+      String lastName = request.getParameter("lastName");
+      String initials = request.getParameter("initials");
+      String addressLine1 = request.getParameter("addressLine1");
+      String addressLine2 = request.getParameter("addressLine2");
+      String addressLine3 = request.getParameter("addressLine3");
+      String dateOfBirth = request.getParameter("dateOfBirth");
+      String email = request.getParameter("email");
+      String mobileNo = request.getParameter("mobileNo");
+      String homeNo = request.getParameter("homeNo");
+      String passportID = request.getParameter("passportID");
+      String NIC = request.getParameter("NIC");
+      String password = request.getParameter("password");
           
            encryption enc = new encryption();
        try {
@@ -41,11 +52,26 @@ public class Register extends HttpServlet {
              
            String hashAndSalt = eccPassword+Salt;
            dbConnect conn = new dbConnect();
-               PreparedStatement insertPass = conn.prepareStatement("INSERT INTO user(email,salt,hashAndSalt) VALUES (?,?,?)");
-                        insertPass.setString(1,email); 
-                        insertPass.setString(2,Salt); 
-                        insertPass.setString(3,hashAndSalt); 
-                        insertPass.executeUpdate();
+               PreparedStatement insertPass = conn.prepareStatement("INSERT INTO user(firstName,middleName,initials,lastName,addressLine1"
+                       + ",addressLine2,addressLine3,dateOfBirth,email,mobileNo,homeNo,passportID,NIC,salt,hashAndSalt) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+               insertPass.setString(1,firstName); 
+               insertPass.setString(2,middleName); 
+               insertPass.setString(3,initials); 
+               insertPass.setString(4,lastName); 
+               insertPass.setString(5,addressLine1); 
+               insertPass.setString(6,addressLine2); 
+               insertPass.setString(7,addressLine3); 
+               insertPass.setString(8,dateOfBirth); 
+               insertPass.setString(9,email); 
+               insertPass.setString(10,mobileNo); 
+               insertPass.setString(11,homeNo);
+               insertPass.setString(12,passportID); 
+               insertPass.setString(13,NIC);
+               insertPass.setString(14,Salt); 
+               insertPass.setString(15,hashAndSalt);
+               
+               
+               insertPass.executeUpdate();
            
            
            

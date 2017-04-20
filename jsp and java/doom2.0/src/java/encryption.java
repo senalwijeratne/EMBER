@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Random;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
@@ -48,8 +49,17 @@ public class encryption extends HttpServlet {
     
     
    public String Salt (){
-       String userSalt = "her";
-       return userSalt;
+       int leftLimit = 97; 
+    int rightLimit = 122; 
+    int targetStringLength = 8;
+    StringBuilder buffer = new StringBuilder(targetStringLength);
+    for (int i = 0; i < targetStringLength; i++) {
+        int randomLimitedInt = leftLimit + (int) 
+          (new Random().nextFloat() * (rightLimit - leftLimit + 1));
+        buffer.append((char) randomLimitedInt);
+    }
+    String generatedString = buffer.toString();
+    return generatedString;
    }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

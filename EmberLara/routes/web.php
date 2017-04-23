@@ -14,3 +14,71 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('ember', function () {
+//     return view('EMBER.index');
+// });
+
+
+
+Route::get('schedule', ['as' => 'schedule', function()
+{
+    return view('EMBER.schedule');
+
+}]);
+
+Route::get('notification', ['as' => 'notification', function()
+{
+    return view('EMBER.notifications');
+
+}]);
+
+Route::get('lecture', ['as' => 'lecture', function()
+{
+    return view('EMBER.lecturers');
+
+}]);
+
+Route::get('students', ['as' => 'students', function()
+{
+    return view('EMBER.students');
+
+}]);
+
+
+Route::get('insertDB', 'movieController@index');
+
+//this is connected to a controller in movieControllercontroller.php
+
+Route::get('test', 'movieController@index');
+
+
+
+
+//checking the DB connection
+Route::get('DbTest', function () {
+    if (DB::connection()->getDatabaseName())
+    {
+    	echo 'connected'.DB::connection()->getDatabaseName();
+    }
+});
+
+
+Route::get('test124', function () {
+    return view('test');
+});
+
+
+
+// Route:: get('movies',function()
+// {
+// 	$movies = \app\Movie::all();
+
+// 	echo'<pre>';
+// 	print_r($movies);
+// 	echo "</pre>";
+
+// });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

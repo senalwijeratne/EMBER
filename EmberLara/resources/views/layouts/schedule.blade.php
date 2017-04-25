@@ -25,7 +25,6 @@
 
     <link rel="shortcut icon" href="images/favicon.png">
 
-   
 
     <link rel="stylesheet" href={{url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en')}}>
     <link rel="stylesheet" href={{url('https://fonts.googleapis.com/icon?family=Material+Icons')}}>
@@ -101,11 +100,11 @@
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a  class="mdl-navigation__link" onclick="loadDoc(1)"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>HOME</a>
           <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('schedule')}}">SCHEDULE</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('notification')}}">NOTIFICATIONS</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('lecture')}}">LECTURERS</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('students')}}">STUDENTS</a>
+          <a href="{{route('notification')}}">NOTIFICATIONS</a>
+          <a href="{{route('lecture')}}">LECTURERS</a>
+          <a href="{{route('students')}}">STUDENTS</a>
           <div class="mdl-layout-spacer"></div>
-          
+          <a >FEEDBACK</a>
         </nav>
       </div>
         

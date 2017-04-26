@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="{{url('styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
 
     <style>
     #view-source {
@@ -73,7 +73,7 @@
         <div class="demo-drawer-header">
           <img src="images/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
-            <span>Hello ~~NAME~~</span>
+            <span>Hello !!~NAME~!!</span>
             <div class="mdl-layout-spacer"></div>
           </div>
         </div>
@@ -139,6 +139,6 @@
         </defs>
       </svg>
 <!--      <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/dashboard/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a> -->
-    <script src={{url('https://code.getmdl.io/1.3.0/material.min.js')}}></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>

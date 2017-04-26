@@ -11,7 +11,7 @@
                 <p>~~Module code-Lecturer Name~~</p>
               </div>
                 <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{route('schedule')}}">
                   Go to schedule
                 </a>
               </div>
@@ -24,7 +24,7 @@
                 <p>~~First few lines of the last notification~~</p>
               </div>
                 <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{route('notification')}}">
                   Go To Notifications
                 </a>
               </div>

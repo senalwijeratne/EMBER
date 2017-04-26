@@ -23,7 +23,7 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
 
 
 
@@ -71,7 +71,7 @@
 
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <div class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
+          <img src="{{asset('img/user.jpg')}}" class="demo-avatar">
           <div class="demo-avatar-dropdown">
             <span>Hello !!~NAME~!!</span>
             <div class="mdl-layout-spacer"></div>

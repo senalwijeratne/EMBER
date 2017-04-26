@@ -30,6 +30,6 @@ class CreateBuildingAreasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('building__areas');
+        Schema::dropIfExists('building_areas');
     }
 }

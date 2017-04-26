@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin', function () {
+    return view('test');
+});
 // Route::get('ember', function () {
 //     return view('EMBER.index');
 // });
@@ -53,6 +56,7 @@ Route::get('insertDB', 'movieController@index');
 Route::get('test', 'movieController@index');
 
 
+////
 
 
 //checking the DB connection
@@ -82,3 +86,5 @@ Route::get('test124', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+// Route::get('/admin', 'adminController@index');
+// 

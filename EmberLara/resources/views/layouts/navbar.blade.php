@@ -58,35 +58,14 @@
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
             <i class="material-icons">more_vert</i>
           </button>
-
-
-
-
-
-          <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                                               <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">Log Out</li>
-          </ul>
+          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+              <li class="mdl-menu__item">Log Out</li>
+            </ul>
           </a>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
+            {{ csrf_field() }}
           </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
 
@@ -99,11 +78,11 @@
           </div>
         </div>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a  class="mdl-navigation__link" ><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i> HOME</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('schedule')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i> SCHEDULE</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('notification')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i> NOTIFICATIONS</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('lecture')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i> LECTURERS</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('students')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i> STUDENTS</a>
+          <a class="mdl-navigation__link" href="{{route('index')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >home</i> HOME</a>
+          <a class="mdl-navigation__link" href="{{route('schedule')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i> SCHEDULE</a>
+          <a class="mdl-navigation__link" href="{{route('notification')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i> NOTIFICATIONS</a>
+          <a class="mdl-navigation__link" href="{{route('lecture')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i> LECTURERS</a>
+          <a class="mdl-navigation__link" href="{{route('students')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i> STUDENTS</a>
           <div class="mdl-layout-spacer"></div>
 
         </nav>

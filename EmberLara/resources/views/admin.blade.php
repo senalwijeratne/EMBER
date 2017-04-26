@@ -8,10 +8,9 @@
                 <div class="panel-body">
                 asdsadadsaddadasda
                  <li><a href="{{ route('profile') }}">Register</a></li>
-                  
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-

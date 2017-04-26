@@ -25,14 +25,14 @@
 
     <link rel="shortcut icon" href="images/favicon.png">
 
-   
+
 
     <link rel="stylesheet" href={{url('https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en')}}>
     <link rel="stylesheet" href={{url('https://fonts.googleapis.com/icon?family=Material+Icons')}}>
     <link rel="stylesheet" href={{url('https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css')}}>
     <script defer src={{url('https://code.getmdl.io/1.3.0/material.min.js')}}></script>
     <link rel="stylesheet" href="{{url('styles.css')}}">
-      
+
     <style>
     #view-source {
       position: fixed;
@@ -44,10 +44,10 @@
       z-index: 900;
     }
     </style>
-      
+
     <script src={{url('loadDoc.js')}}></script>
 </head>
-    
+
   <body>
   {{ csrf_field() }}
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -86,10 +86,10 @@
 
 
 
-       
+
         </div>
       </div>
-        
+
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <div class="demo-drawer-header">
           <img src="images/user.jpg" class="demo-avatar">
@@ -99,18 +99,18 @@
           </div>
         </div>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a  class="mdl-navigation__link" onclick="loadDoc(1)"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>HOME</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('schedule')}}">SCHEDULE</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('notification')}}">NOTIFICATIONS</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('lecture')}}">LECTURERS</a>
-          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('students')}}">STUDENTS</a>
+          <a  class="mdl-navigation__link" ><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i> HOME</a>
+          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('schedule')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i> SCHEDULE</a>
+          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('notification')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i> NOTIFICATIONS</a>
+          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('lecture')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i> LECTURERS</a>
+          <a class="mdl-navigation__link" class="mdl-color-text--blue-grey-400 material-icons" href="{{route('students')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i> STUDENTS</a>
           <div class="mdl-layout-spacer"></div>
-          
+
         </nav>
       </div>
-        
+
         @yield('contentMain')
-        
+
     </div>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
         <defs>

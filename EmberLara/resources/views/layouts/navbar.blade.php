@@ -73,7 +73,7 @@
         <div class="demo-drawer-header">
           <img src="{{asset('img/user.jpg')}}" class="demo-avatar">
           <div class="demo-avatar-dropdown">
-            <span>Hello !!~NAME~!!</span>
+            <span>Hello there, {{ Auth::user()->firstName }}!</span>
             <div class="mdl-layout-spacer"></div>
           </div>
         </div>

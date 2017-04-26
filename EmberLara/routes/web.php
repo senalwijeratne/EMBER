@@ -22,7 +22,11 @@ Route::get('admin', function () {
 //     return view('EMBER.index');
 // });
 
+Route::get('index', ['as' => 'index', function()
+{
+    return view('EMBER.index');
 
+}]);
 
 Route::get('schedule', ['as' => 'schedule', function()
 {

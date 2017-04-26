@@ -58,35 +58,14 @@
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
             <i class="material-icons">more_vert</i>
           </button>
-
-
-
-
-
-          <a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                                               <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">Log Out</li>
-          </ul>
+          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+              <li class="mdl-menu__item">Log Out</li>
+            </ul>
           </a>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
+            {{ csrf_field() }}
           </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
 

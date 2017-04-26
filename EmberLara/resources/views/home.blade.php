@@ -8,8 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                 <li><a href="{{ route('profile') }}">Register</a></li>
-                  
+                    You are logged in!
                 </div>
             </div>
         </div>

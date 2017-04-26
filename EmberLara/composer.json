@@ -9,6 +9,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/annotations": "^5.3.0",
+        "laravelcollective/html": "^5.4",
         "maddhatter/laravel-fullcalendar": "^1.2"
     },
     "require-dev": {

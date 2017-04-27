@@ -19,7 +19,7 @@
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay,listMonth'
 			},
-			defaultDate: '2017-04-12',
+			defaultDate: new Date(), //EDIT#1 : Returns the current date now.
 			navLinks: true, // can click day/week names to navigate views
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events
@@ -31,7 +31,7 @@
 				{
 					title: 'Long Event',
 					start: '2017-04-07',
-					end: '2017-04-10'
+					end: '2017-04-10'	
 				},
 				{
 					id: 999,
@@ -101,6 +101,11 @@
 </style>
 </head>
 <body>
+<div>
+	<form action="">
+		
+	</form>
+</div>
 
 <div id='calendar'></div>
 

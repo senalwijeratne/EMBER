@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class BatchController extends Controller
 {
-    //
+    protected $table = 'batch';
 }

@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class BuildingController extends Controller
 {
-    //
+     protected $table = 'building';
 }

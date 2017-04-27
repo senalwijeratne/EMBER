@@ -110,7 +110,7 @@
 
                         <!-- Enter dateOfBirth-->
                         <div class="form-group{{ $errors->has('dateOfBirth') ? ' has-error' : '' }}  mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label for="dateOfBirth" class="col-md-4 mdl-textfield__label"></label>
+                            <label for="dateOfBirth" class="col-md-4 mdl-textfield__label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Date Of Birth</label>
 
                                 <input id="dateOfBirth" class="mdl-textfield__input" type="date" name="dateOfBirth" value="{{ old('dateOfBirth') }}"  >
 

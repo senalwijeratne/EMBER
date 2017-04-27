@@ -39,12 +39,12 @@
 						</div>
 
 						<div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<label class="mdl-textfield__label" for="start_date">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStart Date</label>
+							<label class="mdl-textfield__label" for="start_date">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Start Date</label>
 							<input type="date" class="mdl-textfield__input" id="start_date" name="start_date">
 						</div>
 
 						<div class="form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<label class="mdl-textfield__label" for="end_date">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEnd Date</label>
+							<label class="mdl-textfield__label" for="end_date">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp End Date</label>
 							<input type="date" class="mdl-textfield__input" id="end_date" name="end_date">
 						</div>
 

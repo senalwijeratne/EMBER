@@ -7,4 +7,5 @@ use Illuminate\Http\Request;
 class LecturerController extends Controller
 {
     protected $table = 'lecturers';
+
 }

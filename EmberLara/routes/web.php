@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,7 +33,7 @@ Route::get('schedule', ['as' => 'schedule', function()
 {
     return view('EMBER.schedule');
 
-}]);
+}])->name('schedule');
 
 Route::get('notification', ['as' => 'notification', function()
 {
@@ -98,3 +99,9 @@ Route::get('test124', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+
+// These are the routes for the Lecture_Schedule
+Route::get('/schedule/{batchID}');
+Route::post('/schedule/createLecture', 'LectureScheduleController@createLecture');

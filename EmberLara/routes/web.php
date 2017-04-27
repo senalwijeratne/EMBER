@@ -33,7 +33,7 @@ Route::get('schedule', ['as' => 'schedule', function()
 {
     return view('EMBER.schedule');
 
-}])->name('schedule');
+}]);
 
 Route::get('notification', ['as' => 'notification', function()
 {

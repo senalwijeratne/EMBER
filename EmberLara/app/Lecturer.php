@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lecturer extends Model
 {
-    protected $table = 'lecturers';
+  
+    // protected $connection = 'mysql';
+    protected $primaryKey = '';
+    protected $table = 'polecturerssts';
+    protected $fillable = array(
+        '',
+        '',
+        
+    );
 }

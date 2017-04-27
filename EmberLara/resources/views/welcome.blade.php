@@ -1,7 +1,6 @@
 <!doctype html>
 <head>
     <style type="text/css">
-
       html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -167,7 +166,6 @@
                 <div class="top-right links">
 
                         <a href="{{ url('/home') }}">Home</a>
-
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
 

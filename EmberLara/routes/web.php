@@ -28,13 +28,11 @@ Route::get('index', ['as' => 'index', function()
     return view('EMBER.index');
 
 }]);
-
 Route::get('schedule', ['as' => 'schedule', function()
 {
     return view('EMBER.schedule');
 
 }]);
-
 Route::get('notification', ['as' => 'notification', function()
 {
     $data['data']=DB::table('posts')->get();
@@ -48,18 +46,18 @@ Route::get('notification', ['as' => 'notification', function()
     }
 
 }]);
-
 Route::get('lecture', ['as' => 'lecture', function()
 {
     return view('EMBER.lecturers');
 
 }]);
-
 Route::get('students', ['as' => 'students', function()
 {
     return view('EMBER.students');
 
 }]);
+
+
 
 
 Route::get('insertDB', 'movieController@index');
@@ -105,18 +103,20 @@ Route::group(['middleware' => ['admin']],function(){
         return view('EMBER.index');
     });
 });
-//////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 /////////lecturer middleware direct//////////////////////////
-Route::group(['middleware2' => ['lecturer']],function(){
+Route::group(['middleware' => ['lecturer']],function(){
     Route::get('/lecturer',function(){
-        return view('EMBER.lecturerPages.indexLec');
+        // return view('EMBER.lecturerPages.indexLec');
+        echo "in";
     });
 });
-//////////////////////////////////////////////////////////
+/////////////////
 /////////student middleware direct//////////////////////////
-Route::group(['middleware3' => ['student']],function(){
+Route::group(['middleware' => ['student']],function(){
     Route::get('/student',function(){
-        return view('EMBER.studentPages.indexStudent');
+        // return view('EMBER.studentPages.indexStudent');
+        echo "ina";
     });
 });
 //////////////////////////////////////////////////////////

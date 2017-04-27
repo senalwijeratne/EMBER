@@ -17,12 +17,12 @@ class studentMiddle
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check() && Auth::student()->authLevel == 3) {
+        if (Auth::guard($guard)->check() && Auth::user()->authLevel == 3) {
             return $next($request);
         }
         else
         {
-            return redirect('/index');
+            return redirect('/');
         }
 
         

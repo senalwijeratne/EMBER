@@ -17,12 +17,12 @@ class lecturerMiddle
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check() && Auth::lecturer()->authLevel == 2) {
+        if (Auth::guard($guard)->check() && Auth::user()->authLevel == 2) {
             return $next($request);
         }
         else
         {
-            return redirect('/index');
+            return redirect('/');
         }
 
         

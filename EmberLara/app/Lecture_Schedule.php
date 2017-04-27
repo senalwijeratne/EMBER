@@ -20,7 +20,21 @@ class Lecture_Schedule extends Model
         'buildingAreaID',
         'start_date',
         'end_date'
-    );
+   );
+
+    public static function returnBatchSchedule($batchID){
+    	$batid = $batchid;
+    	echo 'value is -->'.$batid;
+
+    	$result = static::where('batchid','=',$batid);
+    	//$result = App\Lecture_Schedule::where('batchid','=',1)->get()
+    	// App\Lecture_Schedule::returnBatchSchedule(1)->get();
+
+    	foreach ($result as $arr) {
+    		echo $arr->start_date;
+    		echo'RESULT';
+    	}
+    }
 
 
 

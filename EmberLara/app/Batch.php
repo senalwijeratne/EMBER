@@ -20,5 +20,5 @@ class Batch extends Model
 
     public function lectureSchedules(){
     	return $this->hasMany(Lecture_Schedule::class);
-    }	
+    } 	
 }

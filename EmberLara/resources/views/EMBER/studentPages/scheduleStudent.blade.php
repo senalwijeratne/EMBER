@@ -1,10 +1,10 @@
 @extends('layouts.scheduleLayout')
 
 @section('contentMain')
-<div>
+<!-- <div>
 	<form role="form" method="POST" action="/schedule/createLecture">
 		{{ csrf_field() }}
-       
+
         <div class="form-group">
         	<label for="moduleID">moduleID</label>
         	<input type="text" class="form-control" id="moduleID" name="moduleID">
@@ -44,9 +44,8 @@
         	<button type="submit" class="btn btn-primary" >Submit</button>
         </div>
 	</form>
-</div>
+</div> -->
 
            <div id='calendar'></div>
 
   @endsection
-      

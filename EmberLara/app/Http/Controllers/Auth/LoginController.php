@@ -25,7 +25,19 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/home;
+   
+    protected function authenticated($request, $user)
+    {
+        if($user->authLevel == 1){
+            return redirect()->intended('/admin');
+        } else if($user->authLevel == 2){
+            return redirect()->intended('/lecturer');
+        } else if($user->authLevel == 3){
+            return redirect()->intended('/student');
+        }
+    }
+
 
     /**
      * Create a new controller instance.

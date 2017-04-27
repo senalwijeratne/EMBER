@@ -8,7 +8,7 @@
               <img src="{{asset('img/home.jpg')}}" alt="Avatar" style="width:100%" >
               <div class="container">
                 <h4><b>Next Event/Class</b></h4>
-                <p>~~Module code-Lecturer Name~~</p>
+                <p>LECTURER PAGE</p>
               </div>
                 <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{route('schedule')}}">

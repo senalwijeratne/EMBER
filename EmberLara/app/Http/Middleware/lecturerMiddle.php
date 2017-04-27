@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class adminMiddle
+class lecturerMiddle
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class adminMiddle
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check() && Auth::user()->authLevel == 1) {
+        if (Auth::guard($guard)->check() && Auth::lecturer()->authLevel == 2) {
             return $next($request);
         }
         else

@@ -99,13 +99,22 @@ Route::get('test124', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-//admin middleware direct
+/////////admin middleware direct//////////////////////////
 Route::group(['middleware' => ['admin']],function(){
     Route::get('/admin',function(){
         echo "admin is in";
     });
 });
-///////////////////////////
+//////////////////////////////////////////////////////////
+/////////lecturer middleware direct//////////////////////////
+Route::group(['middleware2' => ['lecturer']],function(){
+    Route::get('/lecturer',function(){
+        echo "lecturer is in";
+    });
+});
+//////////////////////////////////////////////////////////
+
+
 
 // These are the routes for the Lecture_Schedule
 Route::get('/schedule/{batchID}');

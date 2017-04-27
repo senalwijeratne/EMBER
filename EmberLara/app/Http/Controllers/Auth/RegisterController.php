@@ -52,7 +52,16 @@ class RegisterController extends Controller
             'middleName' => 'required|string|max:255',
             'lastName' => 'required|string|max:255',
             'dateOfBirth' => 'required|string|max:255',
-
+            'initials' => 'required|string|max:255',
+            'addressLine1' => 'required|string|max:255',
+            'addressLine2' => 'required|string|max:255',
+            'addressLine3' => 'required|string|max:255',
+            'dateOfBirth' => 'required|date|max:255',
+            'mobileNo' => 'required|numeric|max:10',
+            'homeNo' => 'required|numeric|max:10',
+            'authLevel' => 'required|string|max:255',
+            'passportID' => 'required|numeric|max:10',
+            'NIC' => 'required|numeric|max:10',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);

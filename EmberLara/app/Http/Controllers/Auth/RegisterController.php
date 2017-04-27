@@ -60,8 +60,8 @@ class RegisterController extends Controller
             'mobileNo' => 'required|numeric|max:10',
             'homeNo' => 'required|numeric|max:10',
             'authLevel' => 'required|string|max:255',
-            'passportID' => 'required|numeric|max:10',
-            'NIC' => 'required|numeric|max:10',
+            'passportID' => 'required|numeric|max:9',
+            'NIC' => 'required|numeric|max:9',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);

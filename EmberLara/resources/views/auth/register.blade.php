@@ -192,6 +192,20 @@
                         </div>
                         <br/>
 
+                        <!-- Enter batchID-->
+                        <div class="form-group{{ $errors->has('batchID') ? ' has-error' : '' }}  mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <label for="batchID" class="col-md-4 mdl-textfield__label">batchID:</label>
+
+                                <input id="batchID" class="mdl-textfield__input" type="text" name="batchID" value="{{ old('batchID') }}"  >
+
+                                @if ($errors->has('batchID'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('batchID') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+                        <br/>
+
                         <!-- Enter email -->
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}  mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <label for="email" class="col-md-4 mdl-textfield__label">Email Address:</label>

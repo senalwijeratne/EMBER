@@ -10,6 +10,10 @@ class LectureScheduleController extends Controller
 {
     protected $table = 'lecture_schedule';
 
+    public function batch(){
+        return $this->belongsTo(Batch::class);
+    }
+
     public function createLecture(){
 
     	// Create and save the lecture

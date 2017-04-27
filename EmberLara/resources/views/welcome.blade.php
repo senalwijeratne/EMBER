@@ -148,22 +148,31 @@
 
         body {background-color: rgb(255, 140, 102);z-index:1;overflow-y:hidden;overflow-x:hidden;}
     </style>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
+    <link rel="shortcut icon" href="{{asset('img/ember.png')}}">
+    <title>EMBER</title>
+
 </head>
 
-<body> 
+<body class="">
 
 
-<div class="flex-center position-ref full-height">
-           
+<div class="flex-center position-ref full-height demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
                 <div class="top-right links">
-                   
+
                         <a href="{{ url('/home') }}">Home</a>
-                    
+
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
-                   
+
                 </div>
-         
+
 
             <div class="content">
                 <div class="title m-b-md">
@@ -171,7 +180,7 @@
                     Ember
                 </div>
 
-           <!--      <div class="links">
+                <!-- <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="{{ url('/test') }}">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
@@ -180,7 +189,7 @@
                 </div> -->
             </div>
         </div>
-    
+
     <ul class="bubbles">
         <li></li>
         <li></li>

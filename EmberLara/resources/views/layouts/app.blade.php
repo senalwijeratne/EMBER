@@ -98,6 +98,7 @@
 
 
     </style>
+    
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -105,7 +106,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Ember </title>
+        <title>EMBER</title>
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -117,7 +118,7 @@
             ]) !!};
         </script>
 
-      <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
+      <link rel="shortcut icon" href="{{asset('img/ember.png')}}">
 
 
 

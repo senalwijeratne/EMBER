@@ -91,6 +91,7 @@ class RegisterController extends Controller
             'passportID' => $data['passportID'],
             'NIC' => $data['NIC'],
             'email' => $data['email'],
+            'batchID'=> $data['batchID'],
             'password' => bcrypt($data['password']),
             'passwordConfirmation' => bcrypt($data['password_confirmation']),
 

@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->string('authLevel');
             $table->string('passportID');
             $table->string('NIC');
+            $table->string('batchID')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

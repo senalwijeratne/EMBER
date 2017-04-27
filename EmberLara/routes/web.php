@@ -102,14 +102,14 @@ Route::get('/home', 'HomeController@index');
 /////////admin middleware direct//////////////////////////
 Route::group(['middleware' => ['admin']],function(){
     Route::get('/admin',function(){
-        echo "admin is in";
+        return view('EMBER.index');
     });
 });
 //////////////////////////////////////////////////////////
 /////////lecturer middleware direct//////////////////////////
 Route::group(['middleware2' => ['lecturer']],function(){
     Route::get('/lecturer',function(){
-        echo "lecturer is in";
+        return view('EMBER.index');
     });
 });
 //////////////////////////////////////////////////////////

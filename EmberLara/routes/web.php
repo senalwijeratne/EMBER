@@ -114,6 +114,4 @@ Route::get('insertNotification', ['as' => 'insertNotification', function()
     return view('EMBER.insertPost');
 
 }]);
-
-
 Route::post('/insert', 'postInputController@inputPost');

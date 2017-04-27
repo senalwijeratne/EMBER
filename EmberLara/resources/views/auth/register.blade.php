@@ -152,7 +152,7 @@
 
                         <!-- Enter authLevel-->
                         <div class="form-group{{ $errors->has('authLevel') ? ' has-error' : '' }}  mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label for="authLevel" class="col-md-4 mdl-textfield__label">Auth Level:</label>
+                            <label for="authLevel" class="col-md-4 mdl-textfield__label">Auth Level: (1:Admin|2:Lecturer|3:Student)</label>
 
                                 <input id="authLevel" class="mdl-textfield__input" type="text" name="authLevel" value="{{ old('authLevel') }}"  >
 
@@ -166,7 +166,7 @@
 
                         <!-- Enter passportID-->
                         <div class="form-group{{ $errors->has('passportID') ? ' has-error' : '' }}  mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label for="passportID" class="col-md-4 mdl-textfield__label">Passport ID:</label>
+                            <label for="passportID" class="col-md-4 mdl-textfield__label">Passport ID:(First 9 Digits)</label>
 
                                 <input id="passportID" class="mdl-textfield__input" type="text" name="passportID" value="{{ old('passportID') }}"  >
 
@@ -180,7 +180,7 @@
 
                         <!-- Enter NIC-->
                         <div class="form-group{{ $errors->has('NIC') ? ' has-error' : '' }}  mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <label for="NIC" class="col-md-4 mdl-textfield__label">NIC:</label>
+                            <label for="NIC" class="col-md-4 mdl-textfield__label">NIC:(First 9 Digits)</label>
 
                                 <input id="NIC" class="mdl-textfield__input" type="text" name="NIC" value="{{ old('NIC') }}"  >
 

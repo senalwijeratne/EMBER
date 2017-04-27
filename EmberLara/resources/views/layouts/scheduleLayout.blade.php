@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel='stylesheet' href="{{asset('css/lib/cupertino/jquery-ui.min.css')}}" />
     <link href="{{asset('css/fullcalendar.min.css ')}}" rel='stylesheet' />
@@ -29,8 +30,6 @@
 
     <link rel="shortcut icon" href="{{asset('img/ember.png')}}">
 
-
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
@@ -52,43 +51,39 @@
     <script src={{url('loadDoc.js')}}></script>
     <script>
 
-  $(document).ready(function() {
+      $(document).ready(function() {
 
-    $('#calendar').fullCalendar({
-      theme: true,
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay,listMonth'
-      },
-      defaultDate: new Date(), //EDIT#1 : Returns the current date now.
-      navLinks: true, // can click day/week names to navigate views
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: {{App\Lecture_Schedule::returnBatchSchedule(Auth::user()->batchID)}}
-    });
-    
-  });
+        $('#calendar').fullCalendar({
+          theme: true,
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay,listMonth'
+          },
+          defaultDate: new Date(), //EDIT#1 : Returns the current date now.
+          navLinks: true, // can click day/week names to navigate views
+          editable: true,
+          eventLimit: true, // allow "more" link when too many events
+          events: {{App\Lecture_Schedule::returnBatchSchedule(Auth::user()->batchID)}}
+        });
 
-</script>
-<style>
+      });
 
-  body {
-    margin: 40px 10px;
-    padding: 0;
-    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-    font-size: 14px;
-  }
+    </script>
 
-  #calendar {
-    max-width: 900px;
-    margin: 0 auto;
-  }
+    <style>
 
-</style>
+      #calendar {
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+    </style>
+
+
 </head>
 
-  <body>
+<body>
   {{ csrf_field() }}
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <div class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
@@ -131,10 +126,7 @@
        <main id="replace" class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
 
-            
-  @yield('contentMain')
-
-
+          @yield('contentMain')
 
         </div>
       </main>
@@ -189,5 +181,6 @@
       </svg>
 <!--      <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/dashboard/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a> -->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  </body>
+</body>
+
 </html>

@@ -36,7 +36,15 @@ Route::get('schedule', ['as' => 'schedule', function()
 
 Route::get('notification', ['as' => 'notification', function()
 {
-    return view('EMBER.notifications');
+    $data['data']=DB::table('posts')->get();
+    if(count($data)>0)
+    {
+        return view('EMBER.notifications',$data);
+    }
+    else
+    {
+        return view('EMBER.notifications');
+    }
 
 }]);
 

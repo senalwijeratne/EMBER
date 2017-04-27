@@ -16,10 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin', function () {
-    return view('test');
-});
-// Route::get('ember', function () {
+
+
+Route::post('post', ['as' => 'post', 'uses' => 'insertPosts@index']);
+// Route::get('ember', functionpost () {
 //     return view('EMBER.index');
 // });
 
@@ -105,3 +105,15 @@ Route::get('/home', 'HomeController@index');
 // These are the routes for the Lecture_Schedule
 Route::get('/schedule/{batchID}');
 Route::post('/schedule/createLecture', 'LectureScheduleController@createLecture');
+
+
+
+// These are the routes for the notification insert
+Route::get('insertNotification', ['as' => 'insertNotification', function()
+{
+    return view('EMBER.insertPost');
+
+}]);
+
+
+Route::post('/insert', 'postInputController@inputPost');

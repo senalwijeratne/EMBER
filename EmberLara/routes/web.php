@@ -107,16 +107,16 @@ Route::group(['middleware' => ['admin']],function(){
 /////////lecturer middleware direct//////////////////////////
 Route::group(['middleware' => ['lecturer']],function(){
     Route::get('/lecturer',function(){
-        // return view('EMBER.lecturerPages.indexLec');
-        echo "in";
+        return view('EMBER.lecturerPages.indexLec');
+       
     });
 });
 /////////////////
 /////////student middleware direct//////////////////////////
 Route::group(['middleware' => ['student']],function(){
     Route::get('/student',function(){
-        // return view('EMBER.studentPages.indexStudent');
-        echo "ina";
+         return view('EMBER.studentPages.indexStudent');
+        
     });
 });
 //////////////////////////////////////////////////////////

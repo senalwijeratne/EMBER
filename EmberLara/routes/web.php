@@ -109,10 +109,18 @@ Route::group(['middleware' => ['admin']],function(){
 /////////lecturer middleware direct//////////////////////////
 Route::group(['middleware2' => ['lecturer']],function(){
     Route::get('/lecturer',function(){
-        return view('EMBER.index');
+        return view('EMBER.lecturerPages.indexLec');
     });
 });
 //////////////////////////////////////////////////////////
+/////////student middleware direct//////////////////////////
+Route::group(['middleware3' => ['student']],function(){
+    Route::get('/student',function(){
+        return view('EMBER.studentPages.indexStudent');
+    });
+});
+//////////////////////////////////////////////////////////
+
 
 
 

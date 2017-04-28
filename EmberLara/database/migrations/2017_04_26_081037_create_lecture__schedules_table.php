@@ -16,6 +16,7 @@ class CreateLectureSchedulesTable extends Migration
         Schema::create('lecture__schedules', function (Blueprint $table) {
             $table->increments('Lecture_ScheduleID')->unsigned();
             $table->integer('moduleID');
+            $table->string('moduleName');
             $table->integer('batchID');
             $table->integer('week');
             $table->integer('lecturerUserID');

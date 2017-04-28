@@ -49,6 +49,14 @@
 						</div>
 
 						<div class="form-group">
+						  <label for="batchID">Select list:</label>
+						  <select class="form-control" id="sel1">
+						    <!-- <option value='1'>PLYBatch4</option> -->
+				    		{{  App\Batch::returnBatches()  }}
+						  </select>
+						</div>
+
+						<div class="form-group">
 							<button type="submit" class="btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" >Submit</button>
 						</div>
 					</form>

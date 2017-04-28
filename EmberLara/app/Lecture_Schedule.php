@@ -24,10 +24,13 @@ class Lecture_Schedule extends Model
 
     public static function returnBatchSchedule($batchID){
 
-    	//$batchid = Auth::user->batch
+        // check if 0
+        // if 0 then -> show all 
+    	
     	$result = static::all();
     	//$result = App\Lecture_Schedule::where('batchid','=',1)->get()
     	// App\Lecture_Schedule::returnBatchSchedule(1)->get();
+            
     	echo '[';
     	foreach ($result as $arr) {
     		
@@ -49,7 +52,27 @@ class Lecture_Schedule extends Model
 				       echo   'start:\''.$formattedStartDate.'\',';
 				       echo   'end:\''.$formattedEndDate.'\'';       
     			echo '},';
-    	}
+    	    } else if ($batchID == 0){
+
+                $startDate = $arr->start_date;
+                $endDate = $arr->end_date;
+                $formattedStartDate = date('Y-m-d\TH:i:s',strtotime($startDate));
+                $formattedEndDate = date('Y-m-d\TH:i:s',strtotime($endDate));
+                $title = $arr->moduleID;
+                 //    {
+                 //      id: 999,
+                 //      title: 'Repeating Event',
+                 //      start: '2017-04-09T16:00:00'
+                //              'Y-m-d\TH:i:s'
+                 //    }
+                echo '{';                   
+                     //echo 'id': 999,
+                       echo   'title:\''.$title.'\',';
+                       echo   'start:\''.$formattedStartDate.'\',';
+                       echo   'end:\''.$formattedEndDate.'\'';       
+                echo '},';
+
+            }
     	
     	}
     	echo ']';

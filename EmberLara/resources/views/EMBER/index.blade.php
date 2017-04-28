@@ -7,8 +7,8 @@
             <div class="card demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
               <img src="{{asset('img/home.jpg')}}" alt="Avatar" style="width:100%" >
               <div class="container">
-                <h4><b>Next Event/Class</b></h4>
-                <p>~~Module code-Lecturer Name~~</p>
+                <h4><b>CHECK NEXT CLASS</b></h4>
+                <p>All modules require <strong>70%</strong> attendance.</p>
               </div>
                 <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{route('schedule')}}">
@@ -18,10 +18,10 @@
             </div>
 
             <div class="card demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-              <img src="{{asset('img/home.jpg')}}" alt="Avatar" style="width:100%" >
+              <img src="{{asset('img/notification.png')}}" alt="Avatar" style="width:100%" >
               <div class="container">
-                <h4><b>Last Notification</b></h4>
-                <p>~~First few lines of the last notification~~</p>
+                <h4><b>CHECK NOTIFICATIONS</b></h4>
+                <p>Stay updated. Please check notifications regularly.</p>
               </div>
                 <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{route('notification')}}">

@@ -20,13 +20,27 @@ class LectureScheduleController extends Controller
 
     	Lecture_Schedule::create(request([
 		        'moduleID',
-		        'batchID',
-		        'week',
+                'moduleName',
+                'batchID',
+                'week',
 		        'lecturerUserID',
 		        'buildingAreaID',
+                'lectureHallName',
 		        'start_date',
 		        'end_date'
     		]));
+
+        // $table->increments('Lecture_ScheduleID')->unsigned();
+        //     $table->integer('moduleID');
+        //     $table->string('moduleName');
+        //     $table->integer('batchID');
+        //     $table->integer('week');
+        //     $table->integer('lecturerUserID');
+        //     $table->integer('buildingAreaID');
+        //     $table->string('lectureHallName');
+        //     $table->datetime('start_date');
+        //     $table->datetime('end_date');
+        //     $table->timestamps();
 
     	// Redirect to schedule
     	return redirect('schedule');

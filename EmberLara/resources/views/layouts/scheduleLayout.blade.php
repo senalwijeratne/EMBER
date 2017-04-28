@@ -50,7 +50,7 @@
 
     <script src={{url('loadDoc.js')}}></script>
     <script>
-
+      
       $(document).ready(function() {
 
         $('#calendar').fullCalendar({
@@ -64,6 +64,7 @@
           navLinks: true, // can click day/week names to navigate views
           editable: true,
           eventLimit: true, // allow "more" link when too many events
+          
           events: {{App\Lecture_Schedule::returnBatchSchedule(Auth::user()->batchID)}}
         });
 

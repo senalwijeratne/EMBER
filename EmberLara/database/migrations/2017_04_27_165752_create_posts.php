@@ -17,7 +17,7 @@ class CreatePosts extends Migration
             $table->increments('id');
             $table->integer('batch');
             $table->string('title');
-            $table->test('content');
+            $table->string('content');
 
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class CreatePosts extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts');
     }
 }

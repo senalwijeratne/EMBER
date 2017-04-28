@@ -76,11 +76,11 @@
           </div>
         </div>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="{{route('index')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >home</i> HOME</a>
-          <a class="mdl-navigation__link" href="{{route('schedule')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i> SCHEDULE</a>
-          <a class="mdl-navigation__link" href="{{route('notification')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i> NOTIFICATIONS</a>
-          <a class="mdl-navigation__link" href="{{route('lecture')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i> LECTURERS</a>
-          <a class="mdl-navigation__link" href="{{route('students')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i> STUDENTS</a>
+          <a class="mdl-navigation__link" href="{{route('indexLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >home</i> HOME</a>
+          <a class="mdl-navigation__link" href="{{route('scheduleLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i> SCHEDULE</a>
+          <a class="mdl-navigation__link" href="{{route('notificationLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i> NOTIFICATIONS</a>
+        
+          <a class="mdl-navigation__link" href="{{route('studentsLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i> STUDENTS</a>
           <div class="mdl-layout-spacer"></div>
 
         </nav>

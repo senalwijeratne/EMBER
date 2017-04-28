@@ -1,5 +1,5 @@
 
-@extends('layouts.navbar')
+@extends('layouts.navbarLec')
 
 @section('contentMain')   
  

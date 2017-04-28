@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@extends('layouts.navbarLec')
 
 @section('contentMain')  
 <main class="mdl-layout__content mdl-color--grey-100">

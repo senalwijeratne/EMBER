@@ -22,17 +22,18 @@ Route::post('post', ['as' => 'post', 'uses' => 'insertPosts@index']);
 // Route::get('ember', functionpost () {
 //     return view('EMBER.index');
 // });
+////////////////////////////////////////////////////////
 
 Route::get('index', ['as' => 'index', function()
 {
     return view('EMBER.index');
 
-}]);
+}])->middleware('admin');
 Route::get('schedule', ['as' => 'schedule', function()
 {
     return view('EMBER.schedule');
 
-}]);
+}])->middleware('admin');
 Route::get('notification', ['as' => 'notification', function()
 {
     $data['data']=DB::table('posts')->get();
@@ -45,21 +46,91 @@ Route::get('notification', ['as' => 'notification', function()
         return view('EMBER.notifications');
     }
 
-}]);
+}])->middleware('admin');
 Route::get('lecture', ['as' => 'lecture', function()
 {
     return view('EMBER.lecturers');
 
-}]);
+}])->middleware('admin');
 Route::get('students', ['as' => 'students', function()
 {
     return view('EMBER.students');
 
+}])->middleware('admin');
+//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+Route::get('indexLec', ['as' => 'indexLec', function()
+{
+    return view('EMBER.lecturerPages.indexLec');
+
+}])->middleware('lecturer');
+Route::get('scheduleLec', ['as' => 'scheduleLec', function()
+{
+    return view('EMBER.lecturerPages.scheduleLec');
+
+}])->middleware('lecturer');
+Route::get('notificationLec', ['as' => 'notificationLec', function()
+{
+    $data['data']=DB::table('posts')->get();
+    if(count($data)>0)
+    {
+        return view('EMBER.lecturerPages.notificationsLec',$data);
+    }
+    else
+    {
+        return view('EMBER.lecturerPages.notificationsLec');
+    }
+
+}])->middleware('lecturer');
+Route::get('lectureLec', ['as' => 'lectureLec', function()
+{
+    return view('EMBER.lecturerPages.lecturersLec');
+
+}])->middleware('lecturer');
+Route::get('studentsLec', ['as' => 'studentsLec', function()
+{
+    return view('EMBER.lecturerPages.studentsLec');
+
+}])->middleware('lecturer');
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+
+Route::get('indexStudent', ['as' => 'indexStudent', function()
+{
+    return view('EMBER.studentPages.indexStudent');
+
+}])->middleware('student');
+Route::get('scheduleStudent', ['as' => 'scheduleStudent', function()
+{
+    return view('EMBER.studentPages.scheduleStudent');
+
 }]);
+Route::get('notificationStudent', ['as' => 'notificationStudent', function()
+{
+    $data['data']=DB::table('posts')->get();
+    if(count($data)>0)
+    {
+        return view('EMBER.studentPages.notificationsStudent',$data);
+    }
+    else
+    {
+        return view('EMBER.studentPages.notificationsStudent');
+    }
 
+}])->middleware('student');
+Route::get('lectureStudent', ['as' => 'lectureStudent', function()
+{
+    return view('EMBER.studentPages.lecturersStudent');
 
+}])->middleware('student');
+Route::get('studentsStudent', ['as' => 'studentsStudent', function()
+{
+    return view('EMBER.studentPages.studentsStudent');
 
-
+}])->middleware('student');
+/////////////////////////////////////////////////////
+///////////////////////////////////////////////////
 Route::get('insertDB', 'movieController@index');
 
 //this is connected to a controller in movieControllercontroller.php

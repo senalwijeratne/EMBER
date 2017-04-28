@@ -22,7 +22,7 @@ class lecturerMiddle
         }
         else
         {
-            return redirect('/');
+            return redirect('/lecturer');
         }
 
         

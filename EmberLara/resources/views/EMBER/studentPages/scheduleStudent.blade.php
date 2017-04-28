@@ -1,6 +1,7 @@
 @extends('layouts.scheduleLayout')
 
 @section('contentMain')
+
 <!-- <div>
 	<form role="form" method="POST" action="/schedule/createLecture">
 		{{ csrf_field() }}
@@ -45,6 +46,7 @@
         </div>
 	</form>
 </div> -->
+
 
            <div id='calendar'></div>
 

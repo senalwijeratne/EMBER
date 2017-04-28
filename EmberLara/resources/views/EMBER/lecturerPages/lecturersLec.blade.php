@@ -1,5 +1,5 @@
 
-@extends('layouts.navbar')
+@extends('layouts.navbarLec')
 
 @section('contentMain')   
  
@@ -7,94 +7,30 @@
     <main class="mdl-layout__content mdl-color--grey-100">
 <div class="mdl-grid demo-content">
     
-    <div class="card demo-cards mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-    <ul class="demo-list-icon mdl-list">
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bryan Cranston
-    </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Aaron Paul
-      </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bob Odenkirk
-      </span>
-      </li>
-        <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bryan Cranston
-        </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Aaron Paul
-      </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bob Odenkirk
-      </span>
-      </li>
-        <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bob Odenkirk
-      </span>
-      </li>
+    @foreach($data as $value)
+    <div class="card demo-cards mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing"> 
+       
+        <ul class="demo-list-three mdl-list">
 
-    </ul>
-    </div>
-    <div class="card demo-cards mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-    <ul class="demo-list-icon mdl-list">
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bryan Cranston
-    </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Aaron Paul
-      </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bob Odenkirk
-      </span>
-      </li>
-        <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bryan Cranston
-        </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Aaron Paul
-      </span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">
-        <i class="material-icons mdl-list__item-icon">person</i>
-        Bob Odenkirk
-      </span>
-      </li>
+              <li class="mdl-list__item mdl-list__item--three-line">
+              
+                <span class="mdl-list__item-primary-content">
+                  <i class="material-icons mdl-list__item-avatar">person</i>
+                  <span>{{$value -> title}}</span>
+                  <span class="mdl-list__item-text-body">
+                    {{$value -> content}}
+                  </span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+                </span>
 
-    </ul>
+              </li>
+           
+         </ul>
+        
     </div>
+    @endforeach
     
 <!--
     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="margin-right:12px;">

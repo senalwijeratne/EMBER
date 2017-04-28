@@ -1,7 +1,14 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
+    <link rel='stylesheet' href="{{asset('css/lib/cupertino/jquery-ui.min.css')}}" />
+    <link href="{{asset('css/fullcalendar.min.css ')}}" rel='stylesheet' />
+    <link href="{{asset('css/fullcalendar.print.min.css')}}" rel='stylesheet' media='print' />
+    <script src="{{asset('js/lib/moment.min.js')}}"></script>
+    <script src="{{asset('js/lib/jquery.min.js')}}"></script>
+    <script src="{{asset('js/fullcalendar.min.js')}}"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -23,8 +30,6 @@
 
     <link rel="shortcut icon" href="{{asset('img/ember.png')}}">
 
-
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
@@ -44,9 +49,41 @@
     </style>
 
     <script src={{url('loadDoc.js')}}></script>
+    <script>
+
+      $(document).ready(function() {
+
+        $('#calendar').fullCalendar({
+          theme: true,
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay,listMonth'
+          },
+          defaultDate: new Date(), //EDIT#1 : Returns the current date now.
+          navLinks: true, // can click day/week names to navigate views
+          editable: true,
+          eventLimit: true, // allow "more" link when too many events
+          events: {{App\Lecture_Schedule::returnBatchSchedule(Auth::user()->batchID)}}
+        });
+
+      });
+
+    </script>
+
+    <style>
+
+      #calendar {
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+    </style>
+
+
 </head>
 
-  <body>
+<body>
   {{ csrf_field() }}
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <div class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
@@ -75,12 +112,12 @@
             <div class="mdl-layout-spacer"></div>
           </div>
         </div>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="{{route('indexStudent')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >home</i> HOME</a>
-          <a class="mdl-navigation__link" href="{{route('scheduleStudent')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i> SCHEDULE</a>
-          <a class="mdl-navigation__link" href="{{route('notificationStudent')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i> NOTIFICATIONS</a>
-          <a class="mdl-navigation__link" href="{{route('lectureStudent')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i> LECTURERS</a>
-          <a class="mdl-navigation__link" href="{{route('studentsStudent')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i> STUDENTS</a>
+  <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href="{{route('indexLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >home</i> HOME</a>
+          <a class="mdl-navigation__link" href="{{route('scheduleLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i> SCHEDULE</a>
+          <a class="mdl-navigation__link" href="{{route('notificationLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">notifications</i> NOTIFICATIONS</a>
+          <a class="mdl-navigation__link" href="{{route('lectureLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">record_voice_over</i> LECTURERS</a>
+          <a class="mdl-navigation__link" href="{{route('studentsLec')}}"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i> STUDENTS</a>
           <div class="mdl-layout-spacer"></div>
 
         </nav>
@@ -89,7 +126,7 @@
        <main id="replace" class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
 
-        @yield('contentMain')
+          @yield('contentMain')
 
         </div>
       </main>
@@ -144,5 +181,6 @@
       </svg>
 <!--      <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/dashboard/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">View Source</a> -->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  </body>
+</body>
+
 </html>

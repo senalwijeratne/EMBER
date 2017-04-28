@@ -21,6 +21,7 @@ class CreateLectureSchedulesTable extends Migration
             $table->integer('week');
             $table->integer('lecturerUserID');
             $table->integer('buildingAreaID');
+            $table->string('lectureHallName');
             $table->datetime('start_date');
             $table->datetime('end_date');
             $table->timestamps();

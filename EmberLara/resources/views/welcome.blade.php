@@ -145,7 +145,7 @@
             }
         }
 
-        body {background-color: rgb(255, 140, 102);z-index:1;overflow-y:hidden;overflow-x:hidden;}
+        body {background-color: rgb(96, 125, 139);z-index:1;overflow-y:hidden;overflow-x:hidden;}
     </style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -174,17 +174,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                <img src="{{asset('img/ember.png')}}" class="demo-avatar" height="100" width="100"><br>
+                <img src="{{asset('img/ember.png')}}" class="demo-avatar" height="100" width="100">
+                <br/>
+                <br/>
                     Ember
                 </div>
-
-                <!-- <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="{{ url('/test') }}">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div> -->
             </div>
         </div>
 

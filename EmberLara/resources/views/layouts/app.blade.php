@@ -28,7 +28,7 @@
 
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-orange.min.css">
       <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
       <link rel="stylesheet" href="{{asset('css/style.css')}}" />
 
@@ -177,7 +177,7 @@
               }
           }
 
-          body {background-color: rgb(255, 140, 102);z-index:1;overflow-y:hidden;overflow-x:hidden;}
+          body {background-color: rgb(96, 125, 139);z-index:1;overflow-y:hidden;overflow-x:hidden;}
       </style>
 
   </head>

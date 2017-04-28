@@ -30,6 +30,6 @@ class CreatePosts extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts');
     }
 }

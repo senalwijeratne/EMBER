@@ -14,13 +14,17 @@ class Lecture_Schedule extends Model
     protected $fillable = array(
         'scheduleID',
         'moduleID',
+        'moduleName',
         'batchID',
         'week',
         'lecturerUserID',
         'buildingAreaID',
+        'lectureHallName',
         'start_date',
         'end_date'
    );
+
+    
 
     public static function returnBatchSchedule($batchID){
 
@@ -39,7 +43,9 @@ class Lecture_Schedule extends Model
     			$endDate = $arr->end_date;
     			$formattedStartDate = date('Y-m-d\TH:i:s',strtotime($startDate));
     			$formattedEndDate = date('Y-m-d\TH:i:s',strtotime($endDate));
-    			$title = $arr->moduleID;
+                $hallName = $arr->lectureHallName;
+    			$title = $arr->moduleName;
+
     			 //    {
 			     //      id: 999,
 			     //      title: 'Repeating Event',
@@ -48,7 +54,7 @@ class Lecture_Schedule extends Model
 			     //    }
     			echo '{';					
 				     //echo 'id': 999,
-				       echo   'title:\''.$title.'\',';
+				       echo   'title:\''.$title.' in '.$hallName. '\',';
 				       echo   'start:\''.$formattedStartDate.'\',';
 				       echo   'end:\''.$formattedEndDate.'\'';       
     			echo '},';
@@ -58,7 +64,8 @@ class Lecture_Schedule extends Model
                 $endDate = $arr->end_date;
                 $formattedStartDate = date('Y-m-d\TH:i:s',strtotime($startDate));
                 $formattedEndDate = date('Y-m-d\TH:i:s',strtotime($endDate));
-                $title = $arr->moduleID;
+                $hallName = $arr->lectureHallName;
+                $title = $arr->moduleName;
                  //    {
                  //      id: 999,
                  //      title: 'Repeating Event',
@@ -67,7 +74,7 @@ class Lecture_Schedule extends Model
                  //    }
                 echo '{';                   
                      //echo 'id': 999,
-                       echo   'title:\''.$title.'\',';
+                       echo   'title:\''.$title.' in '.$hallName. '\',';
                        echo   'start:\''.$formattedStartDate.'\',';
                        echo   'end:\''.$formattedEndDate.'\'';       
                 echo '},';
